@@ -45,7 +45,7 @@ def decrypt(text, alphabet, shift):
 	return plaintext
 
 def bruteforce(text, alphabet):
-	for x in xrange(0,26):
+	for x in range(0,26):
 		print (decrypt(text, alphabet, x))
 
 if __name__ == "__main__":
