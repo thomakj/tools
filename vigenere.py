@@ -1,6 +1,6 @@
-#!/usr/bin/python
 # Vigenere Cipher (Polyalphabetic Substitution Cipher)
 # http://inventwithpython.com/hacking (BSD Licensed)
+import pyperclip
 import sys
 
 #LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -8,7 +8,7 @@ LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 
 def main():
 	# This text can be copy/pasted from http://invpy.com/vigenereCipher.py
-	myMessage = "eoy xf, ay vmu m ukfny toy yf ufwhykaxz eazzhn. ufwhykaxz znmxphn. ufwhykaxz ehmoyacoi. vh'jh ehhx cftouhp fx vkmy'u ax cnfxy fc ou. eoy vh kmjhx'y ehhx iffqaxz my vkmy'u mefjh ou."
+	myMessage = 'ucoizsbtkxhtadcg'
 	myKey = 'adsf'
 	translated = []
 
