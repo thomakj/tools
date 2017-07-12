@@ -1,12 +1,7 @@
 import subprocess
 import time
 from datetime import datetime
-
-now = datetime.now()
-date = str(now.year)+' '+str(now.month)+' '+str(now.day)
-doc = open(str(now)+'.txt','a+')
-doc.write(str(date)+'\nTime;Temperature;CPU-usage\n\n')
-
+import unittest
 
 # Method to get the total CPU-usage at this moment
 def getCpuUsage():
@@ -22,15 +17,24 @@ def getTemp():
         temp = subprocess.check_output(command)[56:60]
         return temp
 
-	
-while True :
-	now = datetime.now()
-	timestamp = str(now.hour)+':'+str(now.minute)+':'+str(now.second)
+def main():
+    now = datetime.now()
+    date = str(now.year)+' '+str(now.month)+' '+str(now.day)
+    doc = open(str(now)+'.txt','a+')
+    doc.write(str(date)+'\nTime;Temperature;CPU-usage\n\n')
 
-	temp = getTemp()
-#	getCpuUsage()
-	string = timestamp+';'+temp+'\n'
-	doc.write(string)
-	time.sleep(1)
+    while True :
+    	now = datetime.now()
+    	timestamp = str(now.hour)+':'+str(now.minute)+':'+str(now.second)
 
-doc.close()
+    	temp = getTemp()
+    #	getCpuUsage()
+    	string = timestamp+';'+temp+'\n'
+    	doc.write(string)
+    	time.sleep(1)
+
+    doc.close()
+
+class StatusTest(unittest.TestCase):
+    def testGetTemp(self):
+        self.assertIsInstance(obj=string)
