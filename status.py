@@ -1,4 +1,5 @@
 import subprocess
+import time
 from datetime import datetime
 import unittest
 
@@ -15,6 +16,9 @@ def getTemp():
         command = 'sensors'
         temp = subprocess.check_output(command)[56:60]
         return temp
+
+def test():
+    return 1
 
 def main():
     now = datetime.now()
@@ -35,5 +39,5 @@ def main():
     doc.close()
 
 class StatusTest(unittest.TestCase):
-    def testGetTemp(self):
-        self.assertIsInstance(obj=string)
+    def testTest(self):
+        self.assertEqual(test(),1)
