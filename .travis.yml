@@ -7,7 +7,7 @@ install:
 # command to run tests
 script:
   # - pytest
-  - python -m unittest math.Test
+  - python math/test_my_math.py
 notifications:
   email:
     - tkjoeglu@gmail.com
