@@ -26,3 +26,14 @@ def fibonacci(highestFibonacciNumber):
         i = j
         j = k
     return fibNumbers
+
+def factorize(n):
+    reminder = n
+    factors = []
+    i = 2
+    while reminder > 1:
+        if not reminder % i:
+            factors.append(i)
+            reminder = reminder / i
+        i = i + 1
+    return factors

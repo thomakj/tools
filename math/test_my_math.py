@@ -3,6 +3,7 @@ from my_math import modulo3
 from my_math import modulo5
 from my_math import fibonacci
 from my_math import sumOfEvenNumbers
+from my_math import factorize
 
 class TestMyMathPy(unittest.TestCase):
     def testModulo3(self):
@@ -27,6 +28,11 @@ class TestMyMathPy(unittest.TestCase):
         self.assertEqual(
             sumOfEvenNumbers([1, 2, 3, 5, 8, 13, 21, 34, 55, 89]),
             44)
+
+    def test_factorize(self):
+        self.assertEqual(
+            factorize(13195),[5, 7, 13, 29])
+
 
 if __name__ == '__main__':
     unittest.main()
