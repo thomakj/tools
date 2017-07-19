@@ -32,6 +32,7 @@ class TestMyMathPy(unittest.TestCase):
     def test_factorize(self):
         self.assertEqual(
             factorize(13195),[5, 7, 13, 29])
+        self.assertEqual(factorize(8),[2,2,2])
 
 
 if __name__ == '__main__':

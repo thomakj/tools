@@ -35,5 +35,6 @@ def factorize(n):
         if not reminder % i:
             factors.append(i)
             reminder = reminder / i
+            i = i - 1
         i = i + 1
     return factors
