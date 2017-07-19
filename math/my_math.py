@@ -1,5 +1,3 @@
-import math
-import unittest
 
 def modulo3(n):
     if n % 3: return False
